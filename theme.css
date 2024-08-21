@@ -1,27 +1,28 @@
-/* https://docs.obsidian.md/Themes/App+themes/Build+a+theme */
-
 .side-dock-ribbon-action:hover {
-	background-color: rgb(242, 5, 25);
+	background-color: var(--signalis-primary);
 	border-radius: 3px;
 }
 
 .theme-dark {
-	--background-primary: rgb(0, 0, 0);
-	--background-secondary: rgb(0, 0, 0);
-	--titlebar-background: rgb(0, 0, 0);
-	--titlebar-background-focused: rgb(0, 0, 0);
-	--divider-color: rgb(76, 76, 76);
-	--nav-item-color-active: rgb(242, 5, 25);
-	--text-highlight-bg: rgba(255, 213, 0, 0.5);
-	--blockquote-border-color: rgb(242, 5, 25);
-	--link-color: rgb(242, 5, 25);
-	--link-color-hover: rgb(191, 91, 5);
-	--link-unresolved-color: rgb(242, 5, 25);
-	--link-unresolved-opacity: 0.5;
-	--link-unresolved-decoration-color: rgb(242, 5, 25);
-	--link-external-color: rgb(242, 5, 25);
-	--link-external-color-hover: rgb(191, 91, 5);
-	--code-background: rgb(20, 20, 18);
+	--signalis-primary: rgb(242, 5, 25);
+	--signalis-secondary: rgb(191, 91, 5);
+	--signalis-accent: rgba(255, 213, 0, 0.5);
+	--signalis-background: rgb(0, 0, 0);
+	--signalis-foreground: rgb(255, 255, 255);
+
+	--signalis-background-shade1: rgb(20, 20, 18);
+	--signalis-background-shade2: rgb(68, 69, 62);
+}
+
+.theme-light {
+	--signalis-primary: rgb(242, 5, 25);
+	--signalis-secondary: rgb(191, 91, 5);
+	--signalis-accent: rgba(255, 213, 0, 0.5);
+	--signalis-background: rgb(255, 255, 255);
+	--signalis-foreground: rgb(0, 0, 0);
+
+	--signalis-background-shade1: rgb(20, 20, 18);
+	--signalis-background-shade2: rgb(68, 69, 62);
 }
 
 .inline-title {
@@ -29,15 +30,38 @@
 }
 
 body {
-	--radius-s: 0px;
-	--radius-m: 0px;
-	--radius-l: 0px;
-	--input-radius: 0px;
+	--background-primary: var(--signalis-background);
+	--background-secondary: var(--signalis-background);
+	--titlebar-background: var(--signalis-background);
+	--titlebar-background-focused: var(--signalis-background);
+	--divider-color: var(--signalis-background-shade2);
+	--nav-item-color-active: var(--signalis-primary);
+	--text-highlight-bg: var(--signalis-accent);
+	--blockquote-border-color: var(--signalis-primary);
+	--link-color: var(--signalis-primary);
+	--link-color-hover: var(--signalis-secondary);
+	--link-unresolved-color: var(--signalis-primary);
+	--link-unresolved-opacity: 0.5;
+	--link-unresolved-decoration-color: var(--signalis-primary);
+	--link-external-color: var(--signalis-primary);
+	--link-external-color-hover: var(--signalis-secondary);
+	--code-background: var(--signalis-background-shade1);
+	--h1-color: var(--signalis-primary);
+	--h2-color: var(--signalis-primary);
+	--h3-color: var(--signalis-primary);
+	--h4-color: var(--signalis-primary);
+	--h5-color: var(--signalis-primary);
+	--h6-color: var(--signalis-primary);
+	--inline-title-color: var(--signalis-primary);
+	--radius-s: 2px;
+	--radius-m: 2px;
+	--radius-l: 2px;
+	--input-radius: 2px;
 	--tab-radius-active: 0px;
-	--checkbox-radius: 0px;
-	--toggle-radius: 0px;
-	--toggle-thumb-radius: 0px;
-	--slider-thumb-radius: 0px;
+	--checkbox-radius: 2px;
+	--toggle-radius: 2px;
+	--toggle-thumb-radius: 2px;
+	--slider-thumb-radius: 2px;
 
 	--font-interface: Pokemon DP Pro;
 	--font-text: Futura light;
@@ -66,10 +90,6 @@ svg * {
 
 .menu-separator {
 	margin: var(--size-2-1) calc(var(--size-2-1) * -1);
-}
-
-.cm-header, .inline-title, .cm-url a:link {
-	color: red;
 }
 
 @font-face {
